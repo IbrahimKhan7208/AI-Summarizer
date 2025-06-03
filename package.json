@@ -1,0 +1,17 @@
+{
+  "name": "ai-summarizer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "frontend": "cd frontend && npm install && npm run dev",
+    "backend": "cd backend && npm install && nodemon app.js",
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
