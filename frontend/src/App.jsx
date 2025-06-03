@@ -18,11 +18,11 @@ const App = () => {
   const summaryHandler = async () => {
     setLoading(true);
     if (text.length == 0 && link.length != 0){
-      let linkRes = await axios.post("http://localhost:3000/ai/link-response", {link});
+      let linkRes = await axios.post("https://ai-summarizer-backend-sjlj.onrender.com/ai/link-response", {link});
       setSummary(linkRes.data);
     }
     else if(text.length != 0 && link.length == 0){
-      let textRes = await axios.post("http://localhost:3000/ai/text-response", {text});
+      let textRes = await axios.post("https://ai-summarizer-backend-sjlj.onrender.com/ai/text-response", {text});
       setSummary(textRes.data);
     }
     else{
