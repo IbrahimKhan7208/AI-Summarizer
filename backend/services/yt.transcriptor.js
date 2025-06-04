@@ -5,6 +5,7 @@ async function getYoutubeTranscript (url){
     const {id: vidId} = getVideoId(url)
     if(!vidId) throw new Error ("Invalid Link")
     const transcript = await YoutubeTranscript.fetchTranscript(vidId);
+    console.log("Transcript from YT:", transcript); 
     const text = transcript.map((t)=> t.text).join(" ")
     return text
 }
